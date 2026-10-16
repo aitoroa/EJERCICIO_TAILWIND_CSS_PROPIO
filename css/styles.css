@@ -1,0 +1,49 @@
+/* =========================================================
+   CSS PROPIO DE LA TIENDA
+   Aquí va todo lo que Tailwind no resuelve bien:
+   animaciones con @keyframes, pseudoelementos (::before,
+   ::after), fondos con degradados complejos, formas con
+   clip-path, etc.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   ORDEN DE CAPAS (no borrar esta línea)
+   Tailwind v4 guarda sus estilos en capas. El CSS que queda
+   FUERA de una capa gana siempre a las clases de Tailwind,
+   aunque sea menos específico.
+   Declarando el mismo orden que Tailwind y metiendo nuestras
+   clases en "components", las clases del HTML siguen
+   mandando sobre las nuestras.
+   --------------------------------------------------------- */
+@layer theme, base, components, utilities;
+
+
+@layer components {
+
+    /* Vuestras clases aquí. Ejemplo:
+
+    .mi-clase {
+        background: var(--color-rotulo);
+        animation: mi-animacion 2s infinite;
+    }
+
+    */
+
+}
+
+
+/* ---------------------------------------------------------
+   ANIMACIONES
+   Las @keyframes pueden ir fuera de las capas.
+   --------------------------------------------------------- */
+
+
+
+/* ---------------------------------------------------------
+   ACCESIBILIDAD
+   Si el usuario prefiere menos movimiento, desactivad
+   vuestras animaciones aquí.
+   --------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+
+}
